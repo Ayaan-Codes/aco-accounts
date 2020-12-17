@@ -1,2 +1,2 @@
 # ACO Accounts
-Basically the ACO OAuth system's home.
+Beta ACCOUNTS SYSTEM (for ACO)
