@@ -1,0 +1,646 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+  <meta charset="UTF-8">
+  
+  <!-- Boostrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/errormsgs.css">
+  <title>Mailio</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, viewport-fit=cover">
+
+<link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+<link rel="icon" type="image/png" href="../img/favicon-16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="../img/favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="../img/favicon-96.png" sizes="96x96">
+
+<link rel="apple-touch-icon" href="../img/older-iPhone.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../img/iPhone-6-Plus.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../img/iPad-Retina.png">
+<link rel="apple-touch-icon" sizes="167x167" href="../img/iPad-Pro.png">
+
+<script type="text/javascript" src="https://cdn.iubenda.com/consent_solution/iubenda_cons.js"></script>
+<script type="text/javascript">
+  _iub.cons.init({
+    api_key: "KVbXRAlg7EJ65NiQ8dUpLmlDyC5mtz8L"
+  });
+</script>
+
+<style type="text/css">
+
+  #iubenda-cs-banner {
+    bottom: 0px !important;
+    left: 0px !important;
+    position: fixed !important;
+    width: 100% !important;
+    z-index: 99999998 !important;
+    background-color: black;
+  }
+
+  .iubenda-cs-content {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    width: auto;
+    font-family: Helvetica, Arial, FreeSans, sans-serif;
+    font-size: 14px;
+    background: #000;
+    color: #fff;
+  }
+
+  .iubenda-cs-rationale {
+    max-width: 900px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .iubenda-banner-content>p {
+    font-family: Helvetica, Arial, FreeSans, sans-serif;
+    line-height: 1.5;
+  }
+
+  .iubenda-cs-close-btn {
+    margin: 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+  }
+
+  .iubenda-cs-cookie-policy-lnk {
+    text-decoration: underline;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 900;
+  }
+</style>
+
+<script type="text/javascript"> var _iub = _iub || []; _iub.csConfiguration = { "lang": "en", "siteId": 1450342, "cookiePolicyId": 40198251, "banner": { "slideDown": false, "applyStyles": false } }; </script>
+<script type="text/javascript">(function (w, d) { var loader = function () { var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/cookie_solution/beta/iubenda_cs.js"; tag.parentNode.insertBefore(s, tag); }; if (w.addEventListener) { w.addEventListener("load", loader, false); } else if (w.attachEvent) { w.attachEvent("onload", loader); } else { w.onload = loader; } })(window, document);</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/sticky.min.js"></script>
+<script src="js/angularjs-1.7.5.min.js"></script>
+<script src="js/main.js"></script>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta property="og:url"           content="https://www.mail.io" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="Mailio" />
+<meta property="og:description"   content="Pollution Control for Unwanted Email" />
+<meta property="og:image"         content="https://www.mail.io/img/mailio-share.png" />
+<meta property="og:image:width"   content="2400" />
+<meta property="og:image:height"   content="1260" />
+<meta property="fb:app_id"        content="2024850701173037" />
+<meta property="og:site_name"     content="Mailio" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116155535-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+  
+        gtag('config', 'UA-116155535-1');
+      </script>
+<script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '2024850701173037',
+            xfbml      : true,
+            version    : 'v2.10'
+          });
+          FB.AppEvents.logPageView();
+        };
+      
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "https://connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
+
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '231191241091788');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=231191241091788&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+
+    </head>
+
+<body ng-app="MailIO" ng-controller="AliasCtrl">
+
+<section id="blue">
+
+<section id="navigation">
+
+  <div class="container">
+
+  <nav class="navbar navbar-expand navbar-light" id="main-nav">
+      <a class="navbar-brand" href="/"><img class="nav-brand" src="../img/wordmark.svg" alt="Mailio">
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item nav-features">
+              <a class="nav-link" href="#features">Features <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item nav-science">
+              <a class="nav-link" href="#rocket-science">Technology</a>
+               </li>
+            <li class="nav-item nav-claim">
+              <a class="nav-link" href="/signup">Claim</a>
+            </li>
+            <li class="nav-line">
+              <p>/</p>
+            </li>
+            <li class="nav-item nav-login">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+          </ul>
+        </div>
+</nav>
+
+</div>
+
+ </section>
+
+
+<script>
+    fbq('trackCustom', 'IndexView');
+</script>
+      
+
+<section id="cover">
+
+    <div class="container cover blockchain">
+
+        <div class="blockchain-bg sticky-bg stuck"></div>
+
+            <div class="stuck-slogan">
+
+    <section id="cover-out">
+
+        <div class="row">
+
+            <div class="col-sm slogan-margin">
+
+                <p class="lead slogan js-wp-1-intro-title">Pollution Control for <br/>Unwanted Email</p>
+                <p class="slogan-small js-wp-1-intro-title">Protect your Privacy and Unauthorized use of your Email <br/> with Cryptographic Handshakes</p>
+
+            </div>
+
+        </div>
+
+        <div class="alert alert-danger" role="alert" ng-show="errorMsg" ng-cloak>
+            <h4 class="alert-heading">{{errorMsg}}</h4>
+            <p><span ng-if="suggestions">Try something else or pick a suggestions</span></p>
+            <div class="list-suggestions" ng-repeat="sugg in suggestions">
+                <p class="mb-0 suggestions"><a href="" ng-click="PickAlias(sugg)">{{sugg}}</a></p>
+            </div>
+        </div>
+
+
+        <div class="row justify-content-center mailio-form js-wp-1-intro-title">
+
+          <div class="mailio-form">
+            <form >
+              <div class="form-group">
+                <input type="text" class="form-control" id="emailaddress" maxlength="64" ng-model="signup.alias" aria-describedby="emailHelp" placeholder="your new email address">
+              </div>
+            </form>
+            <p class="atmailio">@mail.io</p>
+            <img src="../img/line.svg" class="line" alt="line">
+            <img src="../img/ellipse.png" class="ellipse-left" alt="ellipse">
+            <img src="../img/ellipse.png" class="ellipse-right" alt="ellipse">
+
+
+        </div>
+        </div>
+
+        <div class="row justify-content-center js-wp-1-intro-title" >
+
+            <div class="mailio-button">
+
+                <a href="#"><button type="button" class="btn btn-primary btn-lg" ng-click="CheckAlias(signup)">Claim your Mailio address</button></a>
+
+            </div>
+
+        </div>
+
+         <div class="row justify-content-center down-arrow">
+               <a href="#ad"><img src="../img/slidedown.svg" class="point-down-black" alt="down"></a>
+           </div>
+
+        </section> <!-- section out cover -->
+        </div>
+    </div>   <!--container-->
+
+
+</section>
+
+    <section id="ad">
+
+       <div class="container">
+
+           <div class="row justify-content-center">
+
+               <div class="mailio-inbox">
+
+
+                <div class="js-ad-1-inbox inbox-layout"><img src="../img/inbox-layout.svg" class="img-inbox-layout" alt="Mailio Inbox">
+
+                <div class="inbox-title inbox-right pos-interface"><p>Modern<br>Interface<br>&#9679;</p></div>
+
+                  </div>
+
+
+                   <div class="js-ad-2-trust inbox-trust"><img src="../img/inbox-trust.svg" class="img-inbox-trust" alt="Mailio Inbox">
+                    <div class="inbox-title inbox-left pos-inbox"><p>Separated<br>Inbox<br>&#9679;</p></div>
+                </div>
+                 <div class="js-ad-3-messages inbox-messages"><img src="../img/inbox-messages.svg" class="img-inbox-messages" alt="Mailio Inbox Messages">
+
+                    <div class="inbox-title inbox-right pos-trust"><p>Handshake a contact<br>to impose Trust<br>&#9679;</p></div>
+                 </div>
+
+
+                <div class="js-ad-4-encryption inbox-encryption-left"><img src="../img/inbox-encryption1.svg" class="img-inbox-encryption hide-left" alt="Mailio Encryption"></div>
+
+                 <div class="js-ad-4-encryption inbox-encryption-right"><img src="../img/inbox-encryption2.svg" class="img-inbox-encryption" alt="Mailio Encryption">
+
+
+                <div class="inbox-title inbox-left pos-encryption"><p>Encrypted<br>Link<br>&#9679;</p></div>
+
+                </div>
+
+                 <div class="inbox-block-label js-ad-7-fundation"><img src="../img/block.svg" class="img-block" alt="dTable"></div>
+                 <div class="inbox-devices-label js-ad-6-fundation"><img src="../img/devices.svg" class="img-devices" alt="Mailio Devices"></div>
+                 <div class="inbox-speed-label js-ad-5-fundation"><img src="../img/speed.svg" class="img-speed" alt="Mailio Speed"></div>
+
+                <div class="inbox-title inbox-right pos-fundation"><p>Modern<br>Fundation<br>&#9679;</p></div>
+
+                <!-- Mobile captions -->
+
+                <div class="pos-interface-mobile">
+                <p>Modern Interface<br>&#9679;</p>
+                <p>Seperated Inbox<br>&#9679;</p>
+                <p>Encrypted Link<br>&#9679;</p>
+                <p>Handshake a contact to impose Trust<br>&#9679;</p>
+                <p>Modern Fundation</p>
+                </div>
+
+
+                </div>
+
+           </div>
+
+            <div class="row justify-content-center down-arrow-animation">
+               <a href="#features"><img src="../img/slidedown.svg" class="point-down-black" alt="down"></a>
+           </div>
+
+
+        </div>
+    </section>
+
+</section>
+
+    <section id="features">
+
+        <div class="container">
+
+            <div class="row mailio-feature">
+
+                <div class="col-sm-6 handshake js-wp-1-handshake">
+
+                <img src="../img/img-handshake.svg" class="handshake-img js-wp-2-handshake" alt="Mailio Handshake">
+
+                </div>
+
+                <div class="col-sm-6  mailio-text js-wp-3-handshake">
+                    <h1 class="mailio-title">Cryptographic Handshakes</h1>
+                    <p class="mailio-description">
+                        Just that someone knows your Email address shouldn't allow them to send you Emails without your consent. With Cryptographic Handshakes you control the rules of communication.
+                    </p>
+                </div>
+            </div>
+
+
+             <div class="row mailio-feature normal">
+
+
+              <div class="col-sm-6 mailio-text js-wp-3-trust">
+                    <h1 class="mailio-title">Privacy</h1>
+                    <p class="mailio-description">We don't have keys to your secrets; we're just the messenger. Enter the world of complete privacy. Only you and intended recipients can read the contents.</p>
+                </div>
+
+                <div class="col-sm-6 trust js-wp-1-trust">
+
+
+                <img src="../img/img-trust.svg" class="trust-img js-wp-2-trust" alt="Mailio Trust">
+
+                </div>
+
+                </div>
+
+                <div class="row mailio-feature reverse">
+
+                    <div class="col-sm-6 trust-reverse js-wp-1-trust-r">
+
+                    <img src="../img/img-trust.svg" class="trust-img js-wp-2-trust-r" alt="Mailio Trust">
+
+                    </div>
+
+                    <div class="col-sm-6 trust-reverse-text mailio-text js-wp-3-trust-r">
+                        <h1 class="mailio-title">Privacy</h1>
+                        <p class="mailio-description">We don't have keys to your secrets; we're just a messenger. Enter the world of complete privacy. Only you and intended recipients can read the contents.</p>
+                    </div>
+
+
+
+                </div>
+
+
+
+               <div class="row mailio-feature">
+
+                <div class="col-sm-6 inbox js-wp-1-inbox">
+
+
+                <img src="../img/img-inbox.svg" class="inbox-img js-wp-2-inbox" alt="Mailio Inbox">
+
+
+
+                </div>
+
+
+                <div class="col-sm-6 mailio-text js-wp-3-inbox">
+                    <h1 class="mailio-title">Trusted Emails vs Others</h1>
+                    <p class="mailio-description">
+                        Focus on Emails that matter to you. Through Handshakes Mailio organizes your Inbox into Trusted vs Others. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center down-arrow-white">
+                <a href="#rocket-science"><img src="../img/slidedown-white.svg" class="point-down-white" alt="down"></a>
+            </div>
+
+
+        </div>
+
+    </section>
+
+<section id="rocket-science">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <h1 class="rocket-science-title">The Rocket Science</h1>
+            </div>
+
+
+              <div class="rocket-science overflow-bg rocket-normal js-wp-1-rocket">
+
+                <div class="row flex-rocket">
+                    <div class="col-sm-4 square mailio-data"><img src="../img/img-data.svg" class="mailio-data-img js-wp-2-rocket" alt="Mailio Data"></div>
+                    <div class="col-sm-4 square"><img src="../img/icn-user.svg" class="mailio-icnuser-img js-wp-3-rocket" alt="Mailio User"></div>
+                    <div class="col-sm-4 square"><img src="../img/img-protocol.svg" class="img-protocol-img js-wp-4-rocket" alt="Mailio Data"></div>
+               </div>
+            </div>
+
+                 <div class="rocket-science rocket-rotate">
+
+                 <div class="col-sm rocket-90 js-wp-1-rocket-reverse">
+
+                <div class="rocket-mobile">
+                 <ul class="">
+                    <div><li><img src="../img/img-data.svg" class="img-data-reverse js-wp-2-rocket-reverse" alt="Mailio Data"></li></div>
+                    <div class="icnuser-middle"><li><img src="../img/icn-user.svg" class="icn-user-reverse icn-user-middle js-wp-3-rocket-reverse" alt="Mailio User"></li></div>
+                    <div><li><img src="../img/img-protocol.svg" class="img-protocol-reverse js-wp-4-rocket-reverse" alt="Mailio Data"></li></div>
+                </ul>
+               </div>
+               </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+<section id="rocket-features">
+
+       <div class="container">
+
+            <div class="row rocket-list">
+
+                 <div class="col-sm-6 mailio-desc-1 js-wp-1-science-descrption">
+                    <h1 class="mailio-title">End-to-End Encryption</h1>
+                    <p class="mailio-description">Encrypted email and attachments up to 50MB, both using AES 256 GCM. Your password is never sent over the network.</p>
+                </div>
+
+                    <div class="col-sm-6 mailio-desc-2 js-wp-2-science-descrption">
+                    <h1 class="mailio-title">Safety and Speed</h1>
+                    <p class="mailio-description">Decentralized storage system enables you to own your data. With end-to-end encryption this makes your emails and attachments resistant to tampering, censorship and data failures.</p>
+                </div>
+
+            </div>
+
+            <div class="row rocket-list">
+
+                 <div class="col-sm-6 mailio-desc-1 js-wp-3-science-descrption">
+                    <h1 class="mailio-title">Easy to Use</h1>
+                    <p class="mailio-description">All familiar web interface allows day-to-day interactions with your email, seamless sending of encrypted email as well as non-encrypted email.</p>
+                </div>
+
+                    <div class="col-sm-6 mailio-desc-2 js-wp-4-science-descrption">
+                    <h1 class="mailio-title">Performance</h1>
+                    <p class="mailio-description">Supports multi-threaded encryption and upload of larger attachments. Fast retrieval of data from decentralized network.</p>
+                </div>
+
+            </div>
+
+                <div class="row justify-content-center down-arrow-white">
+                    <a href="#early-access"><img src="../img/slidedown-white.svg" class="point-down-white" alt="down"></a>
+                </div>
+
+        </div>
+
+
+</section>
+
+<section id="early-access">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <h1 class="early-access-title">Early Access</h1>
+        </div>
+    
+        <div class="row earlyaccess-feature">
+        
+            <div class="col-sm-6 handshake js-wp-1-earlyaccess">
+        
+                <img src="../img/alpha-q1.svg" class="alpha-q1-image js-wp-2-handshake" alt="Early Access Alpha">
+        
+            </div>
+        
+            <div class="col-sm-6  mailio-text js-wp-3-earlyaccess">
+                <h1 class="mailio-title">Get early Access to Mailio</h1>
+                <p class="mailio-description">
+                    Claim your @mail.io email address and be one of the first to receive limited exclusive access to the Mailio Alpha release in Q1 2019.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+    <section id="form-repeat">
+
+        <div class="container">
+
+        <div class="js-wp-1-repeat-slogan">
+
+            <div class="row">
+
+            <div class="col-sm repeat-slogan">
+                    <h1 class="mailio-title">Pollution Control for <br/>Unwanted Email</h1>
+                    <p class="mailio-description">Protect your Privacy and Unauthorized use of your Email <br/> with Cryptographic Handshakes.</p>
+            </div>
+
+
+            </div>
+
+            <div class="alert alert-danger" role="alert" ng-show="errorMsg" ng-cloak>
+                    <h4 class="alert-heading">{{errorMsg}}</h4>
+                    <p><span ng-if="suggestions">Try something else or pick a suggestions</span></p>
+                    <div ng-repeat="sugg in suggestions">
+                        <p class="mb-0"><a href="" ng-click="PickAlias(sugg)">{{sugg}}</a></p>
+                    </div>
+                </div>
+
+             <div class="row justify-content-center mailio-form">
+
+              <div class="mailio-form">
+
+             <form>
+              <div class="form-group">
+                <input type="text" class="form-control" id="emailaddress" maxlength="64" ng-model="signup.alias" aria-describedby="emailHelp" placeholder="youremailaddress">
+
+              </div>
+            </form>
+            <p class="atmailio">@mail.io</p>
+            <img src="../img/line.svg" class="line" alt="line">
+            <img src="../img/ellipse.png" class="ellipse-left" alt="ellipse">
+            <img src="../img/ellipse.png" class="ellipse-right" alt="ellipse">
+
+        </div>
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="mailio-button">
+
+                    <button type="button" class="btn btn-primary btn-lg" ng-click="CheckAlias(signup)">Claim your Mailio address</button>
+
+            </div>
+
+        </div>
+
+
+            </div> <!--animation div -->
+
+        </div> <!--container -->
+    </section>
+
+
+    <section id="mailio-footer">
+        
+    <div class="container"> 
+        
+        <div class="js-wp-1-stay-in-touch-social">
+    
+        <div class="row">
+        
+        <div class="col-sm stay-in-touch">
+                    <h1 class="mailio-title">Stay in touch</h1>
+                    <p class="mailio-description mailio-slogan-footer">Let's connect and re-define the email expirience together.</p>
+            </div>
+        
+        </div>
+        
+        <div class="row">
+            <div class="col-sm">
+                   <ul class="social-links">
+                    <li><a href="https://t.me/mailioio" target="_blank">Telegram</a></li>
+                    <li><a href="https://twitter.com/realmailio" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/realmailio" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.linkedin.com/company/mailio/" target="_blank">LinkedIn</a></li>  
+                    </ul>  
+                </div>
+        </div>
+        
+        </div>  <!-- footer animation #1 end --> 
+
+                    
+        <div class="js-wp-2-stay-in-touch-social">
+        
+        <div class="row logo-footer">
+            
+            <div class="col-sm"><img src="../img/logo-footer.svg" alt="Mailio"></div>      
+            
+        </div>
+        
+        <div class="row copy-nav">
+            <div class="col-sm">
+                <p class="copy-footer">Copyright 2018, Mailio</p>
+                <a href="https://www.iubenda.com/privacy-policy/40198251" class="iubenda-black no-brand iubenda-embed " title="Privacy Policy">Privacy Policy</a> <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+                <a href="https://www.iubenda.com/privacy-policy/40198251/cookie-policy" class="iubenda-black no-brand iubenda-embed "
+                    title="Cookie Policy">Cookie Policy</a>
+                <script type="text/javascript">(function (w, d) { var loader = function () { var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s, tag); }; if (w.addEventListener) { w.addEventListener("load", loader, false); } else if (w.attachEvent) { w.attachEvent("onload", loader); } else { w.onload = loader; } })(window, document);</script>
+            </div>
+        </div>
+       
+     
+        </div>   <!-- footer animation #2 end -->
+
+
+    </div>
+    
+</section>
+
+<script src="js/app/utils/utils.js"></script>
+<script src="js/app/signup/signup.ctrl.js"></script>
+<script src="js/app/signup/aliascheck.ctrl.js"></script>
+<script src="js/app/signup/referal.ctrl.js"></script>
+<script src="js/app/signup/passreset.ctrl.js"></script>
+<script src="js/app/signup/login.ctrl.js"></script>
+<script src="js/app/app.js"></script>
+
+
+</body>
+</html>
