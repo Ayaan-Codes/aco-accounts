@@ -40,7 +40,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_username);
-            
+
+
             // Set parameters
             $param_username = $username;
             
@@ -61,8 +62,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;                            
-                            
+                            $_SESSION["username"] = $username; 
+                            $_SESSION["usr"] = $username . "#" . $id;                            
                             // Redirect user to welcome page
                             header("location: welcome.php");
                         } else{
