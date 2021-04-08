@@ -10,6 +10,6 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === false){
 <html>
   <body>
   <h1>welcome to app</h1>
-    <h2><?php echo $_SESSION["username"]; ?></h2>
+    <h2><?php echo $_SESSION["usr"]; ?></h2>
   </body>
 </html>
