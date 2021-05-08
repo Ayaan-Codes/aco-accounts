@@ -1,0 +1,14 @@
+{
+    "cXHwk1zFiyg0qcIfu869": {
+      "name":  1,
+      "level": 4,
+      "check": "f9da8c7af80ccd51fe0baa9061e25dfeac5c7198ee4ed6d9110a4d64d5932e4b",
+      "method": "sha256"
+    },
+    "n": {
+        "name":  1,
+        "level": 4,
+        "check": "d",
+        "method": "sha256"
+    }
+}
